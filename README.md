@@ -1,5 +1,5 @@
 # 1XMM
-Code of The 1XMM Token (`0x82974fF91Cd89720C7BAa7222FFb36f7a54516D4`)<br/>
+Code of The 1XMM Token (`0x560dBC9c1C261334515905B54C62B85ba11D979C`)<br/>
 Check the API on our Gitbook: [https://asagaia.gitbook.io/documentation/1xmm-project/api/1xmm-token]
 
 ## 1xMM Project [https://www.one-xmm.com]
