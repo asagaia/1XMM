@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for contracts\base\erc20exchangeable.sol</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">contracts/base/</a> erc20exchangeable.sol
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">92.31% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>12/13</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">92.11% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>35/38</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>17/17</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>35/35</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">30×</span>
+<span class="cline-any cline-yes">22×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// SPDX-License-Identifier: MIT
+pragma solidity &gt;= 0.8.20;
+&nbsp;
+import { IERC20 } from "../interfaces/ierc20.sol";
+import { IExchangeable } from "../interfaces/iexchangeable.sol";
+&nbsp;
+abstract contract ERC20Exchangeable is IExchangeable {
+    /*************
+     * Modifiers *
+     *************/
+     modifier _onlyOwner {
+        require(msg.sender == _owner, "E0");
+        _;
+    }
+&nbsp;
+    modifier ethDepositIsAllowed {
+        require(EthDepositIsAllowed, "E2");
+        _;
+    }
+&nbsp;
+    modifier ethExchangeIsAllowed {
+        require(EthExchangeIsAllowed &amp;&amp; EthExchangeRate != 0, "E3");
+        _;
+    }
+&nbsp;
+    modifier exchangeIsAllowedForToken(address token) {
+        require(_tokenIsApproved[token] &amp;&amp; _exchangeIsAllowed[token] &amp;&amp; _exchangeRates[token] != 0, "E4");
+        _;
+    }
+&nbsp;
+    modifier tokenIsApproved(address token) {
+        require(_tokenIsApproved[token], "E5");
+        _;
+    }
+&nbsp;
+     /**************
+     * Properties *
+     **************/
+     // Private Properties
+     address private _owner;
+&nbsp;
+    // Public properties linked to IExchangeable
+    /// @dev The exchange rate represents a real number with 4 digits precision
+    bool public EthExchangeIsAllowed;
+    bool public EthDepositIsAllowed;
+    uint64 public EthExchangeRate;
+    uint16 internal _precision = 10_000;
+&nbsp;
+    /// @dev Parameters to manage other token exchanges
+    mapping(address tokenAddress =&gt; bool) internal _tokenIsApproved;
+    mapping(address tokenAddress =&gt; uint64) internal _exchangeRates;
+    mapping(address tokenAddress =&gt; bool) internal _exchangeIsAllowed;
+&nbsp;
+    // Other public Properties
+    address[] public ApprovedTokens;
+    mapping(address tokenAddress =&gt; uint8) internal _approvedTokenDecimals;
+&nbsp;
+    /***************
+     * Constructor *
+     ***************/
+    constructor(address owner_) {
+        _owner = owner_;
+        EthDepositIsAllowed = false;
+        EthExchangeIsAllowed = false;
+    }
+&nbsp;
+    /// @notice Sets the change authorization status for ETH to false
+    function removeEthExchangeAuthorization() external _onlyOwner {
+        EthExchangeIsAllowed = false;
+    }
+&nbsp;
+    /// @notice Sets the change authorization status for a token to false
+    function removeExchangeAuthorizationForToken(address tokenToBeReceived) external _onlyOwner tokenIsApproved(tokenToBeReceived) {
+        _exchangeIsAllowed[tokenToBeReceived] = false;
+    }
+&nbsp;
+    /// @notice Sets whether the deposit of ETH against token is allowed or not
+    /// @dev The exchange rate is expressed in pips
+    function setEthDepositExchangeRate(uint64 exchangeRate) external _onlyOwner {
+        EthExchangeRate = exchangeRate;
+        EthDepositIsAllowed = true;
+    }
+&nbsp;
+    /// @notice Sets the ETH deposit authorization to false
+    function removeEthDepositAuthorization() external _onlyOwner {
+        EthDepositIsAllowed = false;
+    }
+&nbsp;
+    /// @notice Updates the exchange rate between ETH and the Token
+    /// @dev The exchange rate is expressed in pips
+    function updateEthExchangeRate(uint64 exchangeRate) external _onlyOwner {
+        EthExchangeRate = exchangeRate;
+        EthExchangeIsAllowed = true;
+    }
+&nbsp;
+    /// @notice Updates the exchange rate between a token and our Token
+    /// @param  tokenToBeReceived The token to be received in exchange of our Token
+    /// @param  exchangeRate The exchange rate, with 4 digits precision (in pips)
+    function updateTokenExchangeRate(address tokenToBeReceived, uint64 exchangeRate) external _onlyOwner tokenIsApproved(tokenToBeReceived) {
+        _exchangeRates[tokenToBeReceived] = exchangeRate;
+        _exchangeIsAllowed[tokenToBeReceived] = true;
+    }
+&nbsp;
+    /// @notice Returns the quantity of ETH available for change against Token
+    function getAvailableQuantityOfETH() external view returns(uint256) {
+        return address(this).balance;
+    }
+&nbsp;
+    /// @notice Returns the latest exchange rate associated to the token to be received
+    /// @return isAllowed true if the exchange is authorized
+    /// @return rate the exchange rate
+    function getExchangeInfoForToken(address tokenToBeReceived) external view tokenIsApproved(tokenToBeReceived) returns(bool isAllowed, uint64 rate) {
+        isAllowed = _exchangeIsAllowed[tokenToBeReceived];
+        rate = _exchangeRates[tokenToBeReceived];
+    }
+&nbsp;
+    /// @notice Returns the available quantity of a token to be exchanged
+    function getAvailableQuantityOfToken(address tokenToBeReceived) public <span class="missing-if-branch" title="else path not taken" >E</span>tokenIsApproved(tokenToBeReceived) returns(uint256 availableQuantity) {
+        availableQuantity = 0;
+&nbsp;
+        (bool success , bytes memory res) = tokenToBeReceived.call(abi.encodeWithSelector(IERC20.balanceOf.selector, address(this)));
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (success) availableQuantity = abi.decode(res, (uint256));
+    }
+&nbsp;
+    /// @notice Adds a token which can be traded against our Token
+    function addApprovedToken(address token, uint8 decimals) external _onlyOwner {
+        require(decimals &lt;= 18, "E105");
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (_tokenIsApproved[token]) <span class="cstat-no" title="statement not covered" >return;</span>
+&nbsp;
+        _tokenIsApproved[token] = true;
+        _exchangeIsAllowed[token] = false;
+&nbsp;
+        ApprovedTokens.push(token);
+        _approvedTokenDecimals[token] = decimals;
+    }
+&nbsp;
+    /// @notice Gets approved tokens
+    function getApprovedTokens() external view returns(address[] memory) {
+        return ApprovedTokens;
+    }
+}</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Apr 22 2025 12:45:31 GMT+0700 (Indochina Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

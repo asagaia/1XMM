@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for contracts\base\erc20allocatable.sol</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">contracts/base/</a> erc20allocatable.sol
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">96.88% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>31/32</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">82.35% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>28/34</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>12/12</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>33/33</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">68×</span>
+<span class="cline-any cline-yes">67×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">56×</span>
+<span class="cline-any cline-yes">50×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">61×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">19×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// SPDX-License-Identifier: MIT
+pragma solidity &gt;= 0.8.20;
+&nbsp;
+import { DurationUnits } from  "../enums.sol";
+import { ERC20Vested } from "./utils/erc20vested.sol";
+import { ERC20Burnable } from "./utils/erc20burnable.sol";
+&nbsp;
+import { IERC20 } from "../interfaces/ierc20.sol";
+import { IERC20Errors } from "../interfaces/ierc20errors.sol";
+&nbsp;
+import { IGetCCIPAdmin } from "@chainlink/contracts-ccip/src/v0.8/ccip/interfaces/IGetCCIPAdmin.sol";
+import { IBurnMint } from "../interfaces/iburnmint.sol";
+&nbsp;
+contract ERC20Allocatable is ERC20Vested, IGetCCIPAdmin, IBurnMint {
+    /// @dev Modifier that checks if the msg.sender is the ccipAdmin.
+    // This function shall be called only when tokens are transferred from one chain to another.
+    // Owner has no right to mint.
+    modifier onlyMinter() {
+        require(msg.sender == _ccipAdmin, "Denied");
+        _;
+    }
+&nbsp;
+    /**************
+     * Properties *
+     **************/
+    // The address of the CCIP Admin
+    address internal _ccipAdmin;
+&nbsp;
+    /**********
+     * Events *
+     **********/
+    /// @notice Event emitted when CCIP Admin is transferred to a new address
+    event CCIPAdminTransferred(address indexed previousAdmin, address indexed newAdmin);
+    /// @notice The Allocated event is triggered when Owner allocates some token to a beneficiary
+    event Allocated(address indexed beneficiary, uint256 amount);
+&nbsp;
+    /***************
+     * Constructor *
+     ***************/
+    constructor(address owner_, string memory name_, string memory symbol_, uint8 decimals_)
+        ERC20Vested(owner_, name_, symbol_, decimals_)
+    { }
+&nbsp;
+    /// @notice Allocates a number of token to a beneficiary
+    /// @param to The beneficiary
+    /// @param amount The amount to allocate
+    /// @param cliffDuration The duration of the cliff
+    /// @param cliffDurationUnit The unit of the cliff duration
+    /// @param upfrontRelease The amount released when cliff period ends
+    /// @param vestingDuration The duration of the vesting
+    /// @param vestingDurationUnit The unit of the vesting duration
+    function allocateWithVesting(address to, uint256 amount, uint16 cliffDuration, DurationUnits cliffDurationUnit, uint8 upfrontRelease, uint16 vestingDuration, 
+    DurationUnits vestingDurationUnit) external onlyOwner {
+        uint vestingStart = _addDuration(block.timestamp, cliffDuration, cliffDurationUnit);
+        allocateWithVesting(to,amount, vestingStart, upfrontRelease, vestingDuration, vestingDurationUnit);
+    }
+&nbsp;
+    /// @notice Allocates a number of token to a beneficiary
+    /// @param to The beneficiary
+    /// @param amount The amount to allocate
+    /// @param cliffEnd The timsestamp of cliff end
+    /// @param upfrontRelease The amount released when cliff period ends
+    /// @param vestingDuration The duration of the vesting
+    /// @param vestingDurationUnit The unit of the vesting duration
+    function allocateWithVesting(address to, uint256 amount, uint cliffEnd, uint8 upfrontRelease, uint16 vestingDuration, DurationUnits vestingDurationUnit) 
+    public <span class="missing-if-branch" title="else path not taken" >E</span>onlyOwner {
+        allocate(to, amount);
+&nbsp;
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (upfrontRelease &gt; 100) upfrontRelease = 100;
+        _createVestingSchedule(to,upfrontRelease, cliffEnd, vestingDuration, vestingDurationUnit, amount);
+    }
+&nbsp;
+    /// @notice Allocates a number of token to a beneficiary
+    /// @param to The beneficiary
+    /// @param amount The amount
+    function allocate(address to, uint256 amount) public onlyOwner {
+        require(to != address(0), "E103");
+        if (to == address(this)) {
+            <span class="missing-if-branch" title="if path not taken" >I</span>if (amount + totalSupply() &gt; _cap) revert IERC20Errors.ERC20AllocationFailed(amount, _cap);
+            _update(address(0), to, amount);
+        } else {
+            if (amount &gt; _availableTokens) revert IERC20Errors.ERC20AllocationFailed(amount, totalSupply());
+            _update(address(this), to, amount);
+        }
+        
+        emit Allocated(to, amount);
+    }
+&nbsp;
+    /// @notice Allocates a number of token to a beneficiary
+    /// @param to The beneficiaries
+    /// @param amount The amounts
+    function massAllocation(address[] memory to, uint256[] memory amount) external onlyOwner {
+        require(to.length == amount.length, "E104");
+&nbsp;
+        for (uint i = 0; i &lt; to.length; i++) {
+            allocate(to[i], amount[i]);
+        }
+    }
+&nbsp;
+    /// @notice Returns the token administrator's address
+    function getCCIPAdmin() external view returns(address) {
+        return _ccipAdmin;
+    }
+&nbsp;
+    /// @notice Transfers the CCIPAdmin role to a new address
+    /// @dev only the owner can call this function, NOT the current ccipAdmin, and 1-step ownership transfer is used.
+    /// @param newAdmin The address to transfer the CCIPAdmin role to. Setting to address(0) is a valid way to revoke
+    /// the role
+    function setCCIPAdmin(address newAdmin) public <span class="missing-if-branch" title="else path not taken" >E</span>onlyOwner {
+        emit CCIPAdminTransferred(_ccipAdmin, newAdmin);
+        _ccipAdmin = newAdmin;
+    }
+&nbsp;
+    /*******************
+     *  IBurnMintImpl  *
+     *******************/
+    /// @notice Mints 'value' amount of tokens when a cross-chain transfer is performed
+    /// @dev This function can only be called by the ccipAdmin.
+    /// @param account The account to receive the tokens
+    /// @param value The amount of tokens to be minted
+    function mint(address account, uint256 value) public onlyMinter {
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (totalSupply() + value &gt; _cap) revert ERC20ExceededCap(totalSupply(), _cap);
+        _mint(account, value);
+        _availableTokens = totalSupply() - circulatingSupply();
+&nbsp;
+        emit Minted(account, _ccipAdmin, value);
+    }
+&nbsp;
+    /// @inheritdoc ERC20Burnable
+    function burn(uint256 amount) public override(ERC20Burnable) {
+        // Owner cannot burn non-allocated tokens
+        if (msg.sender == _owner) {
+            require(amount &lt;= balanceOf(address(this)), "E1");
+            super._update(address(this), address(0), amount);
+        }
+        else {
+            super._burn(msg.sender, amount);
+        }
+        
+        emit Burnt(amount);
+    }
+&nbsp;
+    /// @notice IBurnMint
+    function burn(address account, uint256 amount) public override(IBurnMint) {
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (account == msg.sender) burn(amount);
+        else <span class="cstat-no" title="statement not covered" >burnFrom(account, amount)</span>;
+    }
+&nbsp;
+    /// @inheritdoc ERC20Burnable
+    function burnFrom(address account, uint256 amount) public override(ERC20Burnable, IBurnMint) {
+        _spendAllowance(account, msg.sender, amount);
+&nbsp;
+        super._burn(account, amount);
+        emit Burnt(amount);
+    }
+&nbsp;
+    /********************/
+}</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Apr 22 2025 12:45:31 GMT+0700 (Indochina Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for contracts\libraries\utils.sol</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">contracts/libraries/</a> utils.sol
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/42</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/26</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/8</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/41</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// SPDX-License-Identifier: MIT
+pragma solidity &gt;= 0.8.20;
+&nbsp;
+import "./math.sol";
+import "../structures/position.sol";
+import "../enums.sol";
+&nbsp;
+library Utils {
+    uint internal constant ONE_DAY_TIMESPAN_INTERVAL = 86_400;
+    uint internal constant ONE_WEEK_TIMESPAN_INTERVAL = 604_800;
+    uint internal constant TWO_WEEKS_TIMESPAN_INTERVAL = 1_209_600;
+    uint internal constant THREE_WEEKS_TIMESPAN_INTERVAL = 1_814_400;
+    uint internal constant ONE_MONTH_TIMESPAN_INTERVAL = 2_592_000;
+    uint internal constant TWO_MONTHS_TIMESPAN_INTERVAL = 5_184_000;
+    uint internal constant THREE_MONTHS_TIMESPAN_INTERVAL = 7_776_000;
+    uint internal constant ONE_YEAR_TIMESPAN_INTERVAL = 31_536_000;
+&nbsp;
+    uint64 internal constant ONE_DAY_YF = 11_767_034;
+    uint64 private constant ONE_WEEK_YF = 82_369_236;
+    uint64 private constant TWO_WEEKS_YF = 164_738_472;
+    uint64 private constant THREE_WEEKS_YF = 247_107_707;
+    uint64 private constant ONE_MONTH_YF = 353_011_011; // 30 days
+    uint64 private constant TWO_MONTHS_YF = 706_022_021; // 60 days
+    uint64 private constant THREE_MONTHS_YF = 1_059_033_032; // 90 days
+&nbsp;
+    uint internal constant ONE_MINUTE_UPDATE_INTERVAL = 60;
+    uint internal constant TWO_MINUTES_UPDATE_INTERVAL = 120;
+    uint internal constant THREE_MINUTES_UPDATE_INTERVAL = 180;
+    uint internal constant FIVE_MINUTES_UPDATE_INTERVAL = 300;
+    uint internal constant TEN_MINUTES_UPDATE_INTERVAL = 600;
+    //uint internal constant FIFTEEN_MINUTES_UPDATE_INTERVAL = 900;
+    //uint internal constant TWENTY_MINUTES_UPDATE_INTERVAL = 1_200;
+    //uint internal constant THIRTY_MINUTES_UPDATE_INTERVAL = 1_800;
+    //uint internal constant ONE_HOUR_UPDATE_INTERVAL = 3_600;
+    //uint internal constant TWO_HOURS_UPDATE_INTERVAL = 7_200;
+    //uint internal constant THREE_HOURS_UPDATE_INTERVAL = 10_800;
+    //uint internal constant FOUR_HOURS_UPDATE_INTERVAL = 14_400;
+&nbsp;
+    /// @notice Computes option expiry as a year fraction
+<span class="fstat-no" title="function not covered" >    function getTermInformation(uint8 term) internal pure returns(uint expiryInterval, uint64 expiryYF) {</span>
+<span class="cstat-no" title="statement not covered" >        if (term == 0) <span class="cstat-no" title="statement not covered" >return (ONE_DAY_TIMESPAN_INTERVAL, ONE_DAY_YF);</span></span>
+<span class="cstat-no" title="statement not covered" >        if (term == 1) <span class="cstat-no" title="statement not covered" >return (ONE_WEEK_TIMESPAN_INTERVAL, ONE_WEEK_YF);</span></span>
+<span class="cstat-no" title="statement not covered" >        if (term == 2) <span class="cstat-no" title="statement not covered" >return (TWO_WEEKS_TIMESPAN_INTERVAL, TWO_WEEKS_YF);</span></span>
+<span class="cstat-no" title="statement not covered" >        if (term == 3) <span class="cstat-no" title="statement not covered" >return (THREE_WEEKS_TIMESPAN_INTERVAL, THREE_WEEKS_YF);</span></span>
+<span class="cstat-no" title="statement not covered" >        if (term == 4) <span class="cstat-no" title="statement not covered" >return (ONE_MONTH_TIMESPAN_INTERVAL, ONE_MONTH_YF);</span></span>
+<span class="cstat-no" title="statement not covered" >        if (term == 5) <span class="cstat-no" title="statement not covered" >return (TWO_MONTHS_TIMESPAN_INTERVAL, TWO_MONTHS_YF);</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        return (THREE_MONTHS_TIMESPAN_INTERVAL, THREE_MONTHS_YF);</span>
+    }
+&nbsp;
+    /// @notice Checks if an address is in an array of addresses, and returns the index
+<span class="fstat-no" title="function not covered" >    function itemExistsInArray(address item, address[] memory intoArray) internal pure returns(bool, uint) {</span>
+<span class="cstat-no" title="statement not covered" >        for (uint i = 0; i &lt; intoArray.length; i++) {</span>
+<span class="cstat-no" title="statement not covered" >            if (item == intoArray[i]) <span class="cstat-no" title="statement not covered" >return (true, i);</span></span>
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        return (false, 0);</span>
+    }
+&nbsp;
+    /// @notice Checks if a uint is in an array of uint, and returns the index
+<span class="fstat-no" title="function not covered" >    function itemExistsInArray(uint item, uint[] storage intoArray) internal view returns(bool, uint) {</span>
+<span class="cstat-no" title="statement not covered" >        for (uint i = 0; i &lt; intoArray.length; i++) {</span>
+<span class="cstat-no" title="statement not covered" >            if (item == intoArray[i]) <span class="cstat-no" title="statement not covered" >return (true, i);</span></span>
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        return (false, 0);</span>
+    }
+    
+    /// @notice Gets the position pro-rated holding time. If position has been hold for a longer period of time
+    //          than initially expected, the pro-rated time is equal to 1
+<span class="fstat-no" title="function not covered" >    function getProRata(uint tradeTimestamp, Position storage position, uint positionTimeSpanInterval) internal view returns(uint64) {</span>
+<span class="cstat-no" title="statement not covered" >        uint holdingPeriod = tradeTimestamp - position.startDate;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if (holdingPeriod &gt; positionTimeSpanInterval) <span class="cstat-no" title="statement not covered" >return Math.One_32;</span></span>
+<span class="cstat-no" title="statement not covered" >        return uint64((holdingPeriod &lt;&lt; 32) / positionTimeSpanInterval);</span>
+    }
+&nbsp;
+    /// @notice Returns the accrual period as a year fraction
+<span class="fstat-no" title="function not covered" >    function getAccrualYF(uint currentFixingUpdateInterva, uint expiryInterval) internal pure returns(uint64) {</span>
+<span class="cstat-no" title="statement not covered" >        return Math.div(uint64(currentFixingUpdateInterva) &lt;&lt; 32, uint64(expiryInterval) &lt;&lt; 32);</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function removePositionFromArray(uint32 indexOfItemToRemove, Position[] storage positions) internal {</span>
+<span class="cstat-no" title="statement not covered" >        require(indexOfItemToRemove &lt; positions.length, "Bad Index")</span>;
+<span class="cstat-no" title="statement not covered" >        Position storage lastPosition = positions[positions.length - 1];</span>
+        lastPosition.positionIndex = indexOfItemToRemove;
+        positions[uint(indexOfItemToRemove)] = lastPosition;
+<span class="cstat-no" title="statement not covered" >        positions.pop()</span>;
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function getAccrualDetails(uint64[] storage premiaReceiver, uint64[7] storage currentAccrualYFs, uint128[7] storage payerPositions, uint128[7] storage receiverPositions,</span>
+     uint128 totalPositionPayer, uint128 totalPositionReceiver, uint128 pot) internal view returns(uint128[] memory amtPayerByTerm, uint128[] memory amtReceiverByTerm) {
+        amtPayerByTerm = new uint128[](7);
+        amtReceiverByTerm = new uint128[](7);
+        
+<span class="cstat-no" title="statement not covered" >        if (totalPositionPayer == 0 || totalPositionReceiver == 0) <span class="cstat-no" title="statement not covered" >return (amtPayerByTerm, amtReceiverByTerm);</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        uint8 i;</span>
+<span class="cstat-no" title="statement not covered" >        uint128 totalPaid = 0;</span>
+<span class="cstat-no" title="statement not covered" >        uint160 sumReceiver = 0;</span>
+<span class="cstat-no" title="statement not covered" >        uint160[] memory tmpReceiver = new uint160[](7);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        for (i = 0; i &lt; 7; i++) {</span>
+<span class="cstat-no" title="statement not covered" >            uint64 accrualFactor = Math.mult(premiaReceiver[i], currentAccrualYFs[i]);</span>
+            amtPayerByTerm[i] = uint128(Math.multPerf(accrualFactor, payerPositions[i]) &gt;&gt; 32);
+            tmpReceiver[i] = Math.multPerf(accrualFactor, receiverPositions[i]);
+&nbsp;
+            totalPaid += amtPayerByTerm[i];
+            sumReceiver += tmpReceiver[i];
+        }
+&nbsp;
+        totalPaid += pot;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        for (i = 0; i &lt; 7; i++) {</span>
+            amtReceiverByTerm[i] = uint128(Math.multPerf(uint64(tmpReceiver[i] / sumReceiver), totalPaid) &gt;&gt; 32);
+        }
+    }
+&nbsp;
+    /// @notice Adds a new strike to the list of strikes which have been dealt
+<span class="fstat-no" title="function not covered" >    function addStrikeToList(uint40[] storage existingStrikes, uint40 newStrike) internal {</span>
+<span class="cstat-no" title="statement not covered" >        for (uint32 i = 0; i &lt; existingStrikes.length; i++) {</span>
+<span class="cstat-no" title="statement not covered" >            if (existingStrikes[i] == newStrike) <span class="cstat-no" title="statement not covered" >return;</span></span>
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        existingStrikes.push(newStrike)</span>;
+    }
+}</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Apr 22 2025 11:05:42 GMT+0700 (Indochina Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,563 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for contracts\1xmm_token.sol</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">contracts/</a> 1xmm_token.sol
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">97.73% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>43/44</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">87.5% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>35/40</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>8/8</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>55/55</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// SPDX-License-Identifier: MIT
+pragma solidity &gt;= 0.8.20;
+&nbsp;
+import { IERC20Errors } from "./interfaces/ierc20errors.sol";
+import { IERC20 } from "./interfaces/ierc20.sol";
+&nbsp;
+import { ERC20Allocatable } from "./base/erc20allocatable.sol";
+import { ERC20Exchangeable } from "./base/erc20exchangeable.sol";
+&nbsp;
+contract OneXMM is ERC20Allocatable, ERC20Exchangeable {
+    modifier isApproved(address account) {
+        require(_approvedDepositors[account], "Not Approved");
+        _;
+    }
+&nbsp;
+    /**********
+     * Events *
+     **********/
+    event DepositorStatusChanged(address indexed account, bool status);
+    event Deposited(address indexed from, uint256 amountETH, uint256 amountToken);
+    event ChangedBack(address indexed beneficiary, uint256 amountTokens);
+    event ChangedBackFor(address indexed beneficiary, address tokenReceived, uint256 amount);
+    event Withdrawn(address indexed from, uint256 amount);   
+&nbsp;
+    /**************
+     * Properties *
+     **************/
+    mapping(address account =&gt; bool) private _approvedDepositors;
+&nbsp;
+    /**
+     * @dev Constructor
+     * @param symbol_ The symbol of the token
+     * @param name_ The name of the token
+     */
+    constructor(string memory symbol_, string memory name_)
+        ERC20Allocatable(msg.sender, name_, symbol_, 18)
+        ERC20Exchangeable(msg.sender) payable { }
+&nbsp;
+    receive() external payable {
+        emit Deposited(msg.sender, msg.value, 0);
+    }
+&nbsp;
+    /// @notice Adds an approved depositor who will be able to deposit ETH against Token
+    function changeDepositorStatus(address account, bool status) external <span class="missing-if-branch" title="else path not taken" >E</span>onlyOwner {
+        _approvedDepositors[account] = status;
+        emit DepositorStatusChanged(account, status);
+    }
+&nbsp;
+    /// @notice Enables a user to deposit ETH and receive Tokens in exchange
+    /// @dev The conversion rate applies at a fixed rate, updated by Owner
+    function depositEther() external payable ethDepositIsAllowed isApproved(msg.sender) returns(uint256 amountToken) {
+        uint256 amountETH = msg.value;
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (amountETH == 0) <span class="cstat-no" title="statement not covered" >return 0;</span>
+&nbsp;
+        amountToken = uint256((amountETH * uint256(EthExchangeRate)) / uint256(_precision));
+        
+        if (amountToken &gt; _availableTokens) {
+            // We compute the number of ETH corresponding to the amount of tokens available
+            amountETH = (_availableTokens * uint256(_precision)) / uint256(EthExchangeRate);
+            amountToken = _availableTokens;
+&nbsp;
+            address payable receiver = payable(msg.sender);
+            // We transfer back extra ETH to the msg.sender
+            receiver.call{value:msg.value - amountETH}("");
+        }
+&nbsp;
+        _update(address(this), msg.sender, amountToken);
+&nbsp;
+        emit Deposited(msg.sender, amountETH, amountToken);
+        emit Allocated(msg.sender, amountToken);
+    }
+&nbsp;
+    /// @notice Enables owner to send back some tokens to the Token contract
+    function ownerTransfersBack(uint256 amount) external onlyOwner {
+        if (amount &gt; balanceOf(_owner)) revert IERC20Errors.ERC20InsufficientBalance(_owner, balanceOf(_owner), amount);
+        _update(_owner, address(this), amount);
+    }
+&nbsp;
+    /// @notice Enables a user to sell back an amount of Tokens against ETH
+    /// if there is enough ETH available, and if the change is authorized.
+    /// @dev Sold-back tokens are automatically burnt.
+    /// @param amountToken The amount of tokens to be exchanged
+    function sellBack(uint128 amountToken) external ethExchangeIsAllowed {
+        if (balanceOf(msg.sender) &lt; uint256(amountToken)) revert IERC20Errors.ERC20InsufficientBalance(msg.sender, balanceOf(msg.sender), amountToken);
+        
+        uint256 amt256 = uint256(amountToken);
+        uint256 amountETH = (amt256 * uint256(_precision)) / uint256(EthExchangeRate);
+        uint256 availableQuantityOfETH = address(this).balance;
+&nbsp;
+        if (amountETH &gt; availableQuantityOfETH) {
+            amountETH = availableQuantityOfETH;
+            amountToken = uint128((amountETH * uint256(EthExchangeRate)) / uint256(_precision));
+        }
+        
+        payable(msg.sender).call{value:amountETH}("");
+        
+        // Now we burn the tokens
+        burn(amountToken);
+&nbsp;
+        emit ChangedBack(msg.sender, amountETH);
+        emit Withdrawn(msg.sender, amountToken);
+    }
+&nbsp;
+    /// @notice Enables a user to sell back an amount of Tokens against a preferred token
+    /// if there is enough token available, and if the change is authorized.
+    /// @dev Sold-back tokens are automatically burnt.
+    /// @param amountToken The amount of tokens to be exchanged
+    /// @param tokenToBeReceived The address of the token to be exchanged for
+    function sellBackAgainst(uint128 amountToken, address tokenToBeReceived) external exchangeIsAllowedForToken(tokenToBeReceived) {
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (balanceOf(msg.sender) &lt; uint256(amountToken)) revert IERC20Errors.ERC20InsufficientBalance(msg.sender, balanceOf(msg.sender), amountToken);
+&nbsp;
+        uint8 decimalAdjust = 18 - _approvedTokenDecimals[tokenToBeReceived];
+        uint256 amt256 = uint256(amountToken);
+&nbsp;
+        uint256 amountExpectedToken = (amt256 * uint256(_precision)) / uint256(_exchangeRates[tokenToBeReceived]);
+        if (decimalAdjust != 0) amountExpectedToken /= (10 ** decimalAdjust);
+        uint256 availableQuantity = getAvailableQuantityOfToken(tokenToBeReceived);
+&nbsp;
+        // We make sure that the available quantity of expected token is bigger than the requested amount of expected token
+        if (amountExpectedToken &gt; availableQuantity) {
+            amountExpectedToken = availableQuantity;
+            // We adjust down the quantity of token to be delivered
+            amountToken = uint128((amountExpectedToken * uint256(_exchangeRates[tokenToBeReceived])) / uint256(_precision));
+        }
+        
+        // We transfer the expected to token to msg.sender
+        // Then, we adjust msg.sender's balance
+        IERC20(tokenToBeReceived).transfer(msg.sender, amountExpectedToken);
+        
+        // Now we burn the tokens
+        burn(amountToken);
+&nbsp;
+        emit ChangedBackFor(msg.sender, tokenToBeReceived, amountExpectedToken);
+        emit Withdrawn(msg.sender, amountToken);
+    }
+&nbsp;
+    /// @notice Enables the Owner to buy back tokens from a user, in exchange of ETH and at a specified rate
+    /// @param from The beneficiary
+    /// @param amountToken The amount of tokens
+    /// @param rate The conversion rate
+    function buyBack(address payable from, uint128 amountToken, uint64 rate) external <span class="missing-if-branch" title="else path not taken" >E</span>onlyOwner {
+        if (from == address(0)) revert IERC20Errors.ERC20InvalidReceiver(from);
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (balanceOf(from) &lt; uint256(amountToken)) revert IERC20Errors.ERC20InsufficientBalance(msg.sender, balanceOf(msg.sender), amountToken);
+&nbsp;
+        uint256 availableQuantityOfETH = address(this).balance;
+        require (availableQuantityOfETH != 0, "E106");
+&nbsp;
+        uint256 amountETH = (uint256(amountToken) * uint256(_precision)) / uint256(rate); 
+&nbsp;
+        // We make sure that the available quantity of ETH is bigger than the expected ETH amount
+        // If not, we adjust down the quantity of token to be withdrawn
+        if (amountETH &gt; availableQuantityOfETH) {
+            amountETH = availableQuantityOfETH;
+            amountToken = uint128((amountETH * uint256(rate)) / uint256(_precision));
+        }
+&nbsp;
+        // We check the allowance first
+        // If allowance is not enough, it triggers an error
+        _spendAllowance(from, _owner, amountToken);
+&nbsp;
+        from.call{value:amountETH}("");
+        _update(from, address(this), amountToken); // In this case, we don't burn the tokens; tokens can be reallocated.
+&nbsp;
+        emit ChangedBack(from, amountETH);
+        emit Withdrawn(from, amountToken);
+    }
+}</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Apr 22 2025 12:45:31 GMT+0700 (Indochina Time)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

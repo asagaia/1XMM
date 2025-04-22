@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for contracts\libraries\math.sol</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">contracts/libraries/</a> math.sol
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/47</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/38</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/15</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/60</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// SPDX-License-Identifier: MIT
+pragma solidity &gt;= 0.8.20;
+&nbsp;
+library Math {
+  /*
+  * Minimum value signed 32.32-bit fixed point number may have.
+  */
+  int64 internal constant MIN_32x32 = -0x8000000000000000;
+  /*
+  * Maximum value signed 32.32-bit fixed point number may have. 
+  */
+  int64 internal constant MAX_32x32 = 0x7FFFFFFFFFFFFFFF;
+  /*
+  * Maximum value unsigned 32.32-bit. 
+  */
+  uint64 internal constant MAX_U32x32 = 0xFFFFFFFFFFFFFFFF;
+   /*
+  * Maximum value unsigned 128.32-bit. 
+  */
+  uint160 internal constant MAX_U128x32 = 1461501637330902918203684832716283019655932542975;
+  /*
+  * One
+  */
+  uint64 internal constant One_32 = 0x100000000;
+&nbsp;
+<span class="fstat-no" title="function not covered" >  function max(int8 x, int8 l) internal pure returns(uint8) {</span>
+<span class="cstat-no" title="statement not covered" >    return x &gt; l ? uint8(x) : uint8(l);</span>
+  }
+&nbsp;
+  /**
+  * @notice Calculates x + y for unsigned integer
+  */
+<span class="fstat-no" title="function not covered" >  function add(uint64 x, uint64 y) internal pure returns(uint64)</span>
+  {
+    unchecked {
+<span class="cstat-no" title="statement not covered" >      uint64 res = x + y;</span>
+<span class="cstat-no" title="statement not covered" >      require (res &gt;= x &amp;&amp; res &gt;= y)</span>;
+<span class="cstat-no" title="statement not covered" >      return res;</span>
+    }
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  function addSigned(int64 x, int64 y) internal pure returns(int64)</span>
+  {
+    unchecked {
+<span class="cstat-no" title="statement not covered" >      int96 res = int96(x) + y;</span>
+<span class="cstat-no" title="statement not covered" >      require (res &gt;= MIN_32x32 &amp;&amp; res &lt;= MAX_32x32, "Overflow")</span>;
+<span class="cstat-no" title="statement not covered" >      return int64(res);</span>
+    }
+  }
+&nbsp;
+  /**
+  * @notice Calculates x - y.
+  */
+<span class="fstat-no" title="function not covered" >  function sub(uint64 x, uint64 y) internal pure returns (uint64) {</span>
+    unchecked {
+<span class="cstat-no" title="statement not covered" >      require (x &gt; y)</span>;
+<span class="cstat-no" title="statement not covered" >      return x - y;</span>
+    }
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  function sub(uint x, uint y) internal pure returns (uint) {</span>
+    unchecked {
+<span class="cstat-no" title="statement not covered" >      require (x &gt; y)</span>;
+<span class="cstat-no" title="statement not covered" >      return x - y;</span>
+    }
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  function subSigned(int64 x, int64 y) internal pure returns (int64) {</span>
+    unchecked {
+<span class="cstat-no" title="statement not covered" >      int128 res = int128(x) - int128(y);</span>
+<span class="cstat-no" title="statement not covered" >      require (res &gt;= MIN_32x32 &amp;&amp; res &lt;= MAX_32x32, "Overflow")</span>;
+<span class="cstat-no" title="statement not covered" >      return int64(res);</span>
+    }
+  }
+&nbsp;
+  /// @notice Returns the absolute value of the difference
+<span class="fstat-no" title="function not covered" >  function absSub(uint64 x, uint64 y) internal pure returns (uint64) {</span>
+    unchecked {
+<span class="cstat-no" title="statement not covered" >      if (x &gt; y) {</span>
+<span class="cstat-no" title="statement not covered" >        return x - y;</span>
+      } else {
+<span class="cstat-no" title="statement not covered" >        return y - x;</span>
+      }
+    }
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  function absSub(uint x, uint y) internal pure returns (uint) {</span>
+    unchecked {
+<span class="cstat-no" title="statement not covered" >      if (x &gt; y) {</span>
+<span class="cstat-no" title="statement not covered" >        return x - y;</span>
+      } else {
+<span class="cstat-no" title="statement not covered" >        return y - x;</span>
+      }
+    }
+  }
+&nbsp;
+  /**
+  * @notice Calculates x * y rounding down.
+  */
+<span class="fstat-no" title="function not covered" >  function mult(uint64 x, uint64 y) internal pure returns (uint64) {</span>
+    unchecked {
+<span class="cstat-no" title="statement not covered" >      uint128 res = (uint128(x) * y) &gt;&gt; 32;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      require (res &gt;= 0 &amp;&amp; res &lt;= MAX_U32x32, "Overflow")</span>;
+<span class="cstat-no" title="statement not covered" >      return uint64(res);</span>
+    }
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  function multPerf(uint64 x, uint128 y) internal pure returns (uint160) {</span>
+    unchecked {
+<span class="cstat-no" title="statement not covered" >      uint160 res = uint160((uint256(x) * uint256(y)) &gt;&gt; 32);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      require (res &gt;= 0 &amp;&amp; res &lt;= MAX_U128x32, "Overflow")</span>;
+<span class="cstat-no" title="statement not covered" >      return res;</span>
+    }
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  function multSigned(int64 x, int64 y) internal pure returns (int64) {</span>
+    unchecked {
+<span class="cstat-no" title="statement not covered" >      int128 res = (int128(x) * y) &gt;&gt; 32;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      require (res &gt;= MIN_32x32 &amp;&amp; res &lt;= MAX_32x32, "Overflow")</span>;
+<span class="cstat-no" title="statement not covered" >      return int64(res);</span>
+    }
+  }
+&nbsp;
+  /**
+  * @notice Calculates x / y rounding towards zero.
+  */
+<span class="fstat-no" title="function not covered" >  function div(uint64 x, uint64 y) internal pure returns (uint64) {</span>
+    unchecked {
+<span class="cstat-no" title="statement not covered" >      require (y != 0)</span>;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      uint96 res = (uint96(x) &lt;&lt; 32) / y;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      require (res &lt;= MAX_U32x32)</span>;
+<span class="cstat-no" title="statement not covered" >      return uint64(res);</span>
+    }
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  function div128(uint128 x, uint128 y) internal pure returns (uint64) {</span>
+    unchecked {
+<span class="cstat-no" title="statement not covered" >      require (y != 0)</span>;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      uint160 res = (uint160(x) &lt;&lt; 32) / y;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      require (res &lt;= MAX_U32x32)</span>;
+<span class="cstat-no" title="statement not covered" >      return uint64(res);</span>
+    }
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  function divSigned(int64 x, int64 y) internal pure returns (int64) {</span>
+    unchecked {
+<span class="cstat-no" title="statement not covered" >      require (y != 0)</span>;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      int96 res = (int96(x) &lt;&lt; 32) / y;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      require (res &gt;= MIN_32x32 &amp;&amp; res &lt;= MAX_32x32, "Overflow")</span>;
+<span class="cstat-no" title="statement not covered" >      return int64(res);</span>
+    }
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  function adjustAmountDecimals(uint128 amt, int8 decimalAdj) internal pure returns(uint128) {</span>
+<span class="cstat-no" title="statement not covered" >    if (decimalAdj == 0) <span class="cstat-no" title="statement not covered" >return amt;</span></span>
+&nbsp;
+    unchecked {
+<span class="cstat-no" title="statement not covered" >      if (decimalAdj &lt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >        uint8 f = uint8(-decimalAdj);</span>
+<span class="cstat-no" title="statement not covered" >        return amt / uint128(10 ** f);</span>
+      }
+      else {
+<span class="cstat-no" title="statement not covered" >        return amt * uint128(10 ** uint8(decimalAdj));</span>
+      }
+    }
+  }
+}</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Apr 22 2025 11:05:42 GMT+0700 (Indochina Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>
